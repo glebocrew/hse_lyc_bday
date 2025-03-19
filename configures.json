@@ -1,0 +1,32 @@
+{
+    "db-conn-params":{
+        "user": "root",
+        "password": "glebocrew",
+        "host": "AORUS",
+        "port": 3306,
+        "db": "lyceum_birthday"
+    }
+    ,
+    "messages": {
+        "start":"start message", 
+        "menu":{
+            "button-1":{
+                "text": "Посмотреть карту",
+                "callback": "card"
+            }
+            ,
+            "button-2":{
+                "text": "Выбрать станцию",
+                "callback": "choose"
+            }
+            ,
+            "button-3":{
+                "text": "Завершить игру",
+                "callback": "finish"
+            }
+        }
+        ,
+        "finish":"finish message"
+    }
+
+}
