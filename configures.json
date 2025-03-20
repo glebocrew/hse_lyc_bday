@@ -26,7 +26,79 @@
             }
         }
         ,
+        "reg": "You are succesfully registered! Your master will give you a finish passcode. Enter it in the next msg."
+        ,
+        "random": "Random station"
+        ,
+        "doc": "This is a doc"
+        ,
         "finish":"finish message"
+        
     }
-
+    ,
+    "stations":{
+        "1":{
+            "info": "info about station 1",
+            "password": "enter password to station 1",
+            "finish": "station 1 finish code",
+            "final-message": "station 1 finished!",
+            "files": "none"
+        },
+        "2":{
+            "info": "info about station 2", 
+            "password": "enter password to station 2",
+            "finish": "station 2 finish code",
+            "final-message": "station 2 finished!",
+            "files": "resources/files/test_file.pdf"
+        },
+        "3":{
+            "info": "info about station 3", 
+            "password": "enter password to station 3",
+            "finish": "station 3 finish code",
+            "final-message": "station 3 finished!",
+            "files": "none"
+        },
+        "4":{
+            "info": "info about station 4", 
+            "password": "enter password to station 4",
+            "finish": "station 4 finish code",
+            "final-message": "station 4 finished!",
+            "files": "none"
+        },
+        "5":{
+            "info": "info about station 5", 
+            "password": "enter password to station 5",
+            "finish": "station 5 finish code",
+            "final-message": "station 5 finished!",
+            "files": "none"
+        },
+        "6":{
+            "info": "info about station 6", 
+            "password": "enter password to station 6",
+            "finish": "station 6 finish code",
+            "final-message": "station 6 finished!",
+            "files": "none"
+        },
+        "7":{
+            "info": "info about station 7", 
+            "password": "enter password to station 7",
+            "finish": "station 7 finish code",
+            "final-message": "station 7 finished!",
+            "files": "none"
+        },
+        "8":{
+            "info": "info about station 8", 
+            "password": "enter password to station 8",
+            "finish": "station 8 finish code",
+            "final-message": "station 8 finished!",
+            "files": "none"
+        },
+        "9":{
+            "info": "info about station 9", 
+            "password": "enter password to station 9",
+            "finish": "station 9 finish code",
+            "final-message": "station 9 finished!",
+            "files": "none"
+        }
+    }
 }

@@ -5,7 +5,7 @@ conn_params = load(open("configures.json"))
 maria = MariaConnetion(conn_params['db-conn-params'])
 
 stations = Stations(maria)
-users = Users(maria)
 
-users.set_curr("glebocrew", '2')
-print(users.get_info("glebocrew"))
+stats = load(open("configures.json"))["stations"]
+for stat in stats:
+    stations.add_stat(stat, stats[stat]['info'], stats[stat]['password'], stats[stat]['finish'])
