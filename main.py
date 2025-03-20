@@ -44,27 +44,32 @@ def card(chat_id, username):
 def choose(message, username):
     current = users.get_curr(username)[0][0]
     user_stats = set([ int(stat) for stat in users.get_user(username)[0][0].split(sep=" ") ])
-    print(user_stats)
+    # print(user_stats)
     # print(current)
     if current != "0":
         bot.send_message(message.chat.id, f"you are on a station {current}. You cant leave! Enter finishcode firstly!")
         bot.register_next_step_handler(message, finishcode, station=current)
     else:
-        if user_stats == {0}:
+        # print(sorted(user_stats))
+        # print(list(int(s) for s in stats.keys()))
+        if user_stats == [0]:
             stat = choice(list(stats.keys()))
             bot.send_message(message.chat.id, messages["random"])
             bot.send_message(message.chat.id, f"Station{stat}\n{stats[stat]['info']}\nEnter station password:")
             bot.register_next_step_handler(message, passcode, station=stat)
         else:
-            keyboard = InlineKeyboardMarkup()
-            for stat in stats:
-                user_stats = [ st for st in users.get_user(username)[0][0].split(sep=' ') ]
-                if not (stat in user_stats):
-                    # print(stats[stat])
-                    button = InlineKeyboardButton(text=str(stat), callback_data=str(stat))
-                    keyboard.add(button)
+            if sorted(user_stats) == [0]+[int(s) for s in stats.keys()]:
+                finish(message.chat.id, messages["finish"])
+            else:
+                keyboard = InlineKeyboardMarkup()
+                for stat in stats:
+                    user_stats = [ st for st in users.get_user(username)[0][0].split(sep=' ') ]
+                    if not (stat in user_stats):
+                        # print(stats[stat])
+                        button = InlineKeyboardButton(text=str(stat), callback_data=str(stat))
+                        keyboard.add(button)
         
-            bot.send_message(message.chat.id, "choose station", reply_markup=keyboard)
+                bot.send_message(message.chat.id, "choose station", reply_markup=keyboard)
 
 # command executers
 
