@@ -137,6 +137,7 @@ def finishcode(message, station):
         users.set_curr(message.chat.username, "0")
         users.add_stat(message.chat.username, station)
         bot.send_message(message.chat.id, text=stats[station]["final-message"])
+        choose(message, message.chat.username)
     else:
         bot.send_message(message.chat.id, text="Incorrect finishcode. Try again!")
         bot.register_next_step_handler(message, finishcode, station=station)
