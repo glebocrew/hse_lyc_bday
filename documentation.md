@@ -7,9 +7,7 @@
 ```bash
 apt install python3
 ```
-```bash
-python3 install pip
-```
+
 ```bash
 python3 -m venv .venv
 ```
@@ -20,13 +18,18 @@ source .venv/bin/activate
 ### Скачивание репозитория
 
 ```bash
-git clone github.com/glebocrew/hse_lyc_bday
+git clone https://github.com/glebocrew/hse_lyc_bday
+```
+
+### Переходим в репо
+```bash
+cd hse_lyc_bday
 ```
 
 ### Установка модулей
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ----------
@@ -50,6 +53,18 @@ SHOW GLOBAL VARIABLES LIKE 'PORT';
 
 ```bash
 SHOW GLOBAL VARIABLES LIKE 'HOSTNAME';
+```
+
+```sql
+CREATE DATABASE lyceum_birthday;
+```
+
+```sql
+CREATE TABLE users (username VARCHAR(60), stations TEXT, current_station_id VARCHAR(30));
+```
+
+```sql
+CREATE TABLE stations (station_id VARCHAR(50), info TEXT, station_password TEXT, station_finish TEXT );
 ```
 
 Юзера и пароль вы должны знать. Желательно, чтобы был root.

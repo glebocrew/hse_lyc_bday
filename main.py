@@ -20,7 +20,7 @@ users = Users(maria)
 stations = Stations(maria)
 
 try:
-    API = open("API.txt", "r").read()
+    API = open("API.txt", "r").read().split(sep="\n")[0]
 except: 
     print("API is empty!")
     print("Stopping server...")
