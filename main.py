@@ -87,7 +87,11 @@ def start(message):
 
 @bot.callback_query_handler(func = lambda call: True)
 def callback(call):
-    current = users.get_curr(call.message.chat.username)[0][0]
+    try:
+        current = users.get_curr(call.message.chat.username)[0][0]
+    except:
+        users.add_user(call.message.chat.username)
+        current = users.get_curr(call.message.chat.username)[0][0]
     # if current == "0":
     if True:
         if call.data == "finish":
