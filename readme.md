@@ -12,7 +12,5 @@ A telegram bot for Lyceum's Higher School of Economics 2025 birthday.
 You can contribute this project freely.
 The algorithm of installing to ubuntu server is located in <a href='https://github.com/glebocrew/hse_lyc_bday/blob/master/documentation.md'>docs</a>.
 
-## Using
-
-
+## Copyright
 (c) made by glebocrew

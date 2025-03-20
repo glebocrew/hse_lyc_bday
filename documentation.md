@@ -59,13 +59,23 @@ SHOW GLOBAL VARIABLES LIKE 'HOSTNAME';
 python3 initialize_stations.py
 ```
 
+### API
+```bash
+touch API.txt
+```
+
+Загрузите свой API бота в API.txt без лишних пробелов.
+
 ### Запуск сервера 
 
 ```bash
 python3 main.py
 ```
 
-## SQL действия
+
+
+
+## SQL действия (для исправления багов)
 ## ```USERS```
 
 username | stations | current_station_id

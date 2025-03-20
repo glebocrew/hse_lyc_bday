@@ -19,8 +19,16 @@ maria = MariaConnetion(database_params)
 users = Users(maria)
 stations = Stations(maria)
 
-
-API = open("API.txt", "r").read()
+try:
+    API = open("API.txt", "r").read()
+except: 
+    print("API is empty!")
+    print("Stopping server...")
+    sys.exit(0)
+if API == "":
+    print("API is empty!")
+    print("Stopping server...")
+    sys.exit(0)
 # getting API from API file
 
 bot = TeleBot(API)
